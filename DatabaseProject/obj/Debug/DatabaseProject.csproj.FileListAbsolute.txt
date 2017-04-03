@@ -9,3 +9,13 @@ D:\Steven\OneDrive - umich.edu\CIS\CIS 297\Github Repositories\CIS297-DatabasePr
 D:\Steven\OneDrive - umich.edu\CIS\CIS 297\Github Repositories\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.GenerateResource.Cache
 D:\Steven\OneDrive - umich.edu\CIS\CIS 297\Github Repositories\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.exe
 D:\Steven\OneDrive - umich.edu\CIS\CIS 297\Github Repositories\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.pdb
+C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.exe
+C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.pdb
+C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProject\bin\Debug\Budget Tracker.mdf
+C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProject\bin\Debug\Budget Tracker_log.ldf
+C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.exe
+C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.pdb
+C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csprojResolveAssemblyReference.cache
+C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.Form1.resources
+C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.Properties.Resources.resources
+C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.GenerateResource.Cache
