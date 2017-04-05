@@ -53,7 +53,6 @@
             this.createCategoryButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.expenseDateDay = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.expenseCategoryTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,7 +65,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.incomeDateMonth = new System.Windows.Forms.ComboBox();
-            this.incomeDateDay = new System.Windows.Forms.ComboBox();
             this.incomeAccountTextBox = new System.Windows.Forms.TextBox();
             this.incomeAmountTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -80,6 +78,19 @@
             this.switchAccountNameTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.switchAccountButton = new System.Windows.Forms.Button();
+            this.createCategoryUIButton = new System.Windows.Forms.Button();
+            this.addExpenseUIButton = new System.Windows.Forms.Button();
+            this.addIncomeUIButton = new System.Windows.Forms.Button();
+            this.addAccountUIButton = new System.Windows.Forms.Button();
+            this.editCategoryButton = new System.Windows.Forms.Button();
+            this.editCategoryNewTargetAmountTextBox = new System.Windows.Forms.TextBox();
+            this.editCategoryNameTextBox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.switchAccountUIButton = new System.Windows.Forms.Button();
+            this.editCategoryUIButton = new System.Windows.Forms.Button();
+            this.goBackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.budget_TrackerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -119,6 +130,7 @@
             this.bindingNavigator1.Size = new System.Drawing.Size(931, 27);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            this.bindingNavigator1.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -221,8 +233,9 @@
             this.expenseDateMonth.FormattingEnabled = true;
             this.expenseDateMonth.Location = new System.Drawing.Point(687, 221);
             this.expenseDateMonth.Name = "expenseDateMonth";
-            this.expenseDateMonth.Size = new System.Drawing.Size(119, 24);
+            this.expenseDateMonth.Size = new System.Drawing.Size(176, 24);
             this.expenseDateMonth.TabIndex = 2;
+            this.expenseDateMonth.Visible = false;
             // 
             // label1
             // 
@@ -232,6 +245,7 @@
             this.label1.Size = new System.Drawing.Size(110, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Create Categoy:";
+            this.label1.Visible = false;
             // 
             // label2
             // 
@@ -241,15 +255,17 @@
             this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Name:";
+            this.label2.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(543, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 17);
+            this.label3.Size = new System.Drawing.Size(106, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Taget Amuont:";
+            this.label3.Text = "Target Amuont:";
+            this.label3.Visible = false;
             // 
             // CategoryNameTextBox
             // 
@@ -257,6 +273,7 @@
             this.CategoryNameTextBox.Name = "CategoryNameTextBox";
             this.CategoryNameTextBox.Size = new System.Drawing.Size(176, 22);
             this.CategoryNameTextBox.TabIndex = 6;
+            this.CategoryNameTextBox.Visible = false;
             // 
             // CategoryTargetAmountTextBox
             // 
@@ -264,6 +281,7 @@
             this.CategoryTargetAmountTextBox.Name = "CategoryTargetAmountTextBox";
             this.CategoryTargetAmountTextBox.Size = new System.Drawing.Size(176, 22);
             this.CategoryTargetAmountTextBox.TabIndex = 7;
+            this.CategoryTargetAmountTextBox.Visible = false;
             // 
             // createCategoryButton
             // 
@@ -273,6 +291,7 @@
             this.createCategoryButton.TabIndex = 8;
             this.createCategoryButton.Text = "Create";
             this.createCategoryButton.UseVisualStyleBackColor = true;
+            this.createCategoryButton.Visible = false;
             // 
             // label4
             // 
@@ -282,6 +301,7 @@
             this.label4.Size = new System.Drawing.Size(95, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Add Expense:";
+            this.label4.Visible = false;
             // 
             // label5
             // 
@@ -291,14 +311,7 @@
             this.label5.Size = new System.Drawing.Size(42, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Date:";
-            // 
-            // expenseDateDay
-            // 
-            this.expenseDateDay.FormattingEnabled = true;
-            this.expenseDateDay.Location = new System.Drawing.Point(812, 221);
-            this.expenseDateDay.Name = "expenseDateDay";
-            this.expenseDateDay.Size = new System.Drawing.Size(51, 24);
-            this.expenseDateDay.TabIndex = 11;
+            this.label5.Visible = false;
             // 
             // label6
             // 
@@ -308,6 +321,7 @@
             this.label6.Size = new System.Drawing.Size(69, 17);
             this.label6.TabIndex = 12;
             this.label6.Text = "Category:";
+            this.label6.Visible = false;
             // 
             // expenseCategoryTextBox
             // 
@@ -315,6 +329,7 @@
             this.expenseCategoryTextBox.Name = "expenseCategoryTextBox";
             this.expenseCategoryTextBox.Size = new System.Drawing.Size(176, 22);
             this.expenseCategoryTextBox.TabIndex = 13;
+            this.expenseCategoryTextBox.Visible = false;
             // 
             // label7
             // 
@@ -324,6 +339,7 @@
             this.label7.Size = new System.Drawing.Size(50, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "Memo:";
+            this.label7.Visible = false;
             // 
             // expenseMemoTextBox
             // 
@@ -331,6 +347,7 @@
             this.expenseMemoTextBox.Name = "expenseMemoTextBox";
             this.expenseMemoTextBox.Size = new System.Drawing.Size(176, 22);
             this.expenseMemoTextBox.TabIndex = 15;
+            this.expenseMemoTextBox.Visible = false;
             // 
             // label8
             // 
@@ -340,6 +357,7 @@
             this.label8.Size = new System.Drawing.Size(60, 17);
             this.label8.TabIndex = 16;
             this.label8.Text = "Amount:";
+            this.label8.Visible = false;
             // 
             // label9
             // 
@@ -349,6 +367,7 @@
             this.label9.Size = new System.Drawing.Size(63, 17);
             this.label9.TabIndex = 17;
             this.label9.Text = "Account:";
+            this.label9.Visible = false;
             // 
             // expenseAmountTextBox
             // 
@@ -356,6 +375,7 @@
             this.expenseAmountTextBox.Name = "expenseAmountTextBox";
             this.expenseAmountTextBox.Size = new System.Drawing.Size(176, 22);
             this.expenseAmountTextBox.TabIndex = 18;
+            this.expenseAmountTextBox.Visible = false;
             // 
             // expenseAccountTextBox
             // 
@@ -363,6 +383,7 @@
             this.expenseAccountTextBox.Name = "expenseAccountTextBox";
             this.expenseAccountTextBox.Size = new System.Drawing.Size(176, 22);
             this.expenseAccountTextBox.TabIndex = 19;
+            this.expenseAccountTextBox.Visible = false;
             // 
             // addExpenseButton
             // 
@@ -372,6 +393,7 @@
             this.addExpenseButton.TabIndex = 20;
             this.addExpenseButton.Text = "Add";
             this.addExpenseButton.UseVisualStyleBackColor = true;
+            this.addExpenseButton.Visible = false;
             // 
             // label10
             // 
@@ -381,6 +403,7 @@
             this.label10.Size = new System.Drawing.Size(86, 17);
             this.label10.TabIndex = 21;
             this.label10.Text = "Add Income:";
+            this.label10.Visible = false;
             // 
             // label11
             // 
@@ -390,22 +413,16 @@
             this.label11.Size = new System.Drawing.Size(42, 17);
             this.label11.TabIndex = 22;
             this.label11.Text = "Date:";
+            this.label11.Visible = false;
             // 
             // incomeDateMonth
             // 
             this.incomeDateMonth.FormattingEnabled = true;
             this.incomeDateMonth.Location = new System.Drawing.Point(687, 481);
             this.incomeDateMonth.Name = "incomeDateMonth";
-            this.incomeDateMonth.Size = new System.Drawing.Size(119, 24);
+            this.incomeDateMonth.Size = new System.Drawing.Size(176, 24);
             this.incomeDateMonth.TabIndex = 23;
-            // 
-            // incomeDateDay
-            // 
-            this.incomeDateDay.FormattingEnabled = true;
-            this.incomeDateDay.Location = new System.Drawing.Point(812, 481);
-            this.incomeDateDay.Name = "incomeDateDay";
-            this.incomeDateDay.Size = new System.Drawing.Size(51, 24);
-            this.incomeDateDay.TabIndex = 24;
+            this.incomeDateMonth.Visible = false;
             // 
             // incomeAccountTextBox
             // 
@@ -413,6 +430,7 @@
             this.incomeAccountTextBox.Name = "incomeAccountTextBox";
             this.incomeAccountTextBox.Size = new System.Drawing.Size(176, 22);
             this.incomeAccountTextBox.TabIndex = 28;
+            this.incomeAccountTextBox.Visible = false;
             // 
             // incomeAmountTextBox
             // 
@@ -420,6 +438,7 @@
             this.incomeAmountTextBox.Name = "incomeAmountTextBox";
             this.incomeAmountTextBox.Size = new System.Drawing.Size(176, 22);
             this.incomeAmountTextBox.TabIndex = 27;
+            this.incomeAmountTextBox.Visible = false;
             // 
             // label12
             // 
@@ -429,6 +448,7 @@
             this.label12.Size = new System.Drawing.Size(63, 17);
             this.label12.TabIndex = 26;
             this.label12.Text = "Account:";
+            this.label12.Visible = false;
             // 
             // label13
             // 
@@ -438,6 +458,7 @@
             this.label13.Size = new System.Drawing.Size(60, 17);
             this.label13.TabIndex = 25;
             this.label13.Text = "Amount:";
+            this.label13.Visible = false;
             // 
             // addIncomeButton
             // 
@@ -447,6 +468,7 @@
             this.addIncomeButton.TabIndex = 29;
             this.addIncomeButton.Text = "Add";
             this.addIncomeButton.UseVisualStyleBackColor = true;
+            this.addIncomeButton.Visible = false;
             // 
             // label14
             // 
@@ -456,6 +478,7 @@
             this.label14.Size = new System.Drawing.Size(92, 17);
             this.label14.TabIndex = 30;
             this.label14.Text = "Add Account:";
+            this.label14.Visible = false;
             // 
             // addAccountNameTextBox
             // 
@@ -463,6 +486,7 @@
             this.addAccountNameTextBox.Name = "addAccountNameTextBox";
             this.addAccountNameTextBox.Size = new System.Drawing.Size(176, 22);
             this.addAccountNameTextBox.TabIndex = 32;
+            this.addAccountNameTextBox.Visible = false;
             // 
             // label15
             // 
@@ -472,6 +496,7 @@
             this.label15.Size = new System.Drawing.Size(49, 17);
             this.label15.TabIndex = 31;
             this.label15.Text = "Name:";
+            this.label15.Visible = false;
             // 
             // addAccountButton
             // 
@@ -481,46 +506,191 @@
             this.addAccountButton.TabIndex = 33;
             this.addAccountButton.Text = "Add";
             this.addAccountButton.UseVisualStyleBackColor = true;
+            this.addAccountButton.Visible = false;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(41, 506);
+            this.label16.Location = new System.Drawing.Point(12, 523);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(107, 17);
             this.label16.TabIndex = 34;
             this.label16.Text = "Switch Account:";
+            this.label16.Visible = false;
             // 
             // switchAccountNameTextBox
             // 
-            this.switchAccountNameTextBox.Location = new System.Drawing.Point(185, 544);
+            this.switchAccountNameTextBox.Location = new System.Drawing.Point(156, 561);
             this.switchAccountNameTextBox.Name = "switchAccountNameTextBox";
             this.switchAccountNameTextBox.Size = new System.Drawing.Size(176, 22);
             this.switchAccountNameTextBox.TabIndex = 36;
+            this.switchAccountNameTextBox.Visible = false;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(41, 547);
+            this.label17.Location = new System.Drawing.Point(12, 564);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(49, 17);
             this.label17.TabIndex = 35;
             this.label17.Text = "Name:";
+            this.label17.Visible = false;
             // 
             // switchAccountButton
             // 
-            this.switchAccountButton.Location = new System.Drawing.Point(286, 503);
+            this.switchAccountButton.Location = new System.Drawing.Point(257, 520);
             this.switchAccountButton.Name = "switchAccountButton";
             this.switchAccountButton.Size = new System.Drawing.Size(75, 23);
             this.switchAccountButton.TabIndex = 37;
             this.switchAccountButton.Text = "Switch";
             this.switchAccountButton.UseVisualStyleBackColor = true;
+            this.switchAccountButton.Visible = false;
+            // 
+            // createCategoryUIButton
+            // 
+            this.createCategoryUIButton.Location = new System.Drawing.Point(15, 411);
+            this.createCategoryUIButton.Name = "createCategoryUIButton";
+            this.createCategoryUIButton.Size = new System.Drawing.Size(223, 23);
+            this.createCategoryUIButton.TabIndex = 38;
+            this.createCategoryUIButton.Text = "Create Category";
+            this.createCategoryUIButton.UseVisualStyleBackColor = true;
+            this.createCategoryUIButton.Click += new System.EventHandler(this.createCategoryUIButton_Click);
+            // 
+            // addExpenseUIButton
+            // 
+            this.addExpenseUIButton.Location = new System.Drawing.Point(244, 411);
+            this.addExpenseUIButton.Name = "addExpenseUIButton";
+            this.addExpenseUIButton.Size = new System.Drawing.Size(226, 23);
+            this.addExpenseUIButton.TabIndex = 39;
+            this.addExpenseUIButton.Text = "Add Expense";
+            this.addExpenseUIButton.UseVisualStyleBackColor = true;
+            this.addExpenseUIButton.Click += new System.EventHandler(this.addExpenseUIButton_Click);
+            // 
+            // addIncomeUIButton
+            // 
+            this.addIncomeUIButton.Location = new System.Drawing.Point(12, 440);
+            this.addIncomeUIButton.Name = "addIncomeUIButton";
+            this.addIncomeUIButton.Size = new System.Drawing.Size(226, 23);
+            this.addIncomeUIButton.TabIndex = 40;
+            this.addIncomeUIButton.Text = "Add Income";
+            this.addIncomeUIButton.UseVisualStyleBackColor = true;
+            this.addIncomeUIButton.Click += new System.EventHandler(this.addIncomeUIButton_Click);
+            // 
+            // addAccountUIButton
+            // 
+            this.addAccountUIButton.Location = new System.Drawing.Point(244, 440);
+            this.addAccountUIButton.Name = "addAccountUIButton";
+            this.addAccountUIButton.Size = new System.Drawing.Size(226, 23);
+            this.addAccountUIButton.TabIndex = 41;
+            this.addAccountUIButton.Text = "Add Account";
+            this.addAccountUIButton.UseVisualStyleBackColor = true;
+            this.addAccountUIButton.Click += new System.EventHandler(this.addAccountUIButton_Click);
+            // 
+            // editCategoryButton
+            // 
+            this.editCategoryButton.Location = new System.Drawing.Point(257, 606);
+            this.editCategoryButton.Name = "editCategoryButton";
+            this.editCategoryButton.Size = new System.Drawing.Size(75, 23);
+            this.editCategoryButton.TabIndex = 47;
+            this.editCategoryButton.Text = "Change";
+            this.editCategoryButton.UseVisualStyleBackColor = true;
+            this.editCategoryButton.Visible = false;
+            // 
+            // editCategoryNewTargetAmountTextBox
+            // 
+            this.editCategoryNewTargetAmountTextBox.Location = new System.Drawing.Point(156, 680);
+            this.editCategoryNewTargetAmountTextBox.Name = "editCategoryNewTargetAmountTextBox";
+            this.editCategoryNewTargetAmountTextBox.Size = new System.Drawing.Size(176, 22);
+            this.editCategoryNewTargetAmountTextBox.TabIndex = 46;
+            this.editCategoryNewTargetAmountTextBox.Visible = false;
+            // 
+            // editCategoryNameTextBox
+            // 
+            this.editCategoryNameTextBox.Location = new System.Drawing.Point(156, 646);
+            this.editCategoryNameTextBox.Name = "editCategoryNameTextBox";
+            this.editCategoryNameTextBox.Size = new System.Drawing.Size(176, 22);
+            this.editCategoryNameTextBox.TabIndex = 45;
+            this.editCategoryNameTextBox.Visible = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(12, 683);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(137, 17);
+            this.label18.TabIndex = 44;
+            this.label18.Text = "New Target Amuont:";
+            this.label18.Visible = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(12, 649);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(49, 17);
+            this.label19.TabIndex = 43;
+            this.label19.Text = "Name:";
+            this.label19.Visible = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(12, 609);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(92, 17);
+            this.label20.TabIndex = 42;
+            this.label20.Text = "Edit Categoy:";
+            this.label20.Visible = false;
+            // 
+            // switchAccountUIButton
+            // 
+            this.switchAccountUIButton.Location = new System.Drawing.Point(12, 469);
+            this.switchAccountUIButton.Name = "switchAccountUIButton";
+            this.switchAccountUIButton.Size = new System.Drawing.Size(226, 23);
+            this.switchAccountUIButton.TabIndex = 48;
+            this.switchAccountUIButton.Text = "Switch Account";
+            this.switchAccountUIButton.UseVisualStyleBackColor = true;
+            this.switchAccountUIButton.Click += new System.EventHandler(this.switchAccountUIButton_Click);
+            // 
+            // editCategoryUIButton
+            // 
+            this.editCategoryUIButton.Location = new System.Drawing.Point(244, 469);
+            this.editCategoryUIButton.Name = "editCategoryUIButton";
+            this.editCategoryUIButton.Size = new System.Drawing.Size(226, 23);
+            this.editCategoryUIButton.TabIndex = 49;
+            this.editCategoryUIButton.Text = "Edit Category";
+            this.editCategoryUIButton.UseVisualStyleBackColor = true;
+            this.editCategoryUIButton.Click += new System.EventHandler(this.editCategoryUIButton_Click);
+            // 
+            // goBackButton
+            // 
+            this.goBackButton.Location = new System.Drawing.Point(372, 520);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(136, 74);
+            this.goBackButton.TabIndex = 50;
+            this.goBackButton.Text = "Go Back";
+            this.goBackButton.UseVisualStyleBackColor = true;
+            this.goBackButton.Visible = false;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 717);
+            this.Controls.Add(this.goBackButton);
+            this.Controls.Add(this.editCategoryUIButton);
+            this.Controls.Add(this.switchAccountUIButton);
+            this.Controls.Add(this.editCategoryButton);
+            this.Controls.Add(this.editCategoryNewTargetAmountTextBox);
+            this.Controls.Add(this.editCategoryNameTextBox);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.addAccountUIButton);
+            this.Controls.Add(this.addIncomeUIButton);
+            this.Controls.Add(this.addExpenseUIButton);
+            this.Controls.Add(this.createCategoryUIButton);
             this.Controls.Add(this.switchAccountButton);
             this.Controls.Add(this.switchAccountNameTextBox);
             this.Controls.Add(this.label17);
@@ -534,7 +704,6 @@
             this.Controls.Add(this.incomeAmountTextBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.incomeDateDay);
             this.Controls.Add(this.incomeDateMonth);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -547,7 +716,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.expenseCategoryTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.expenseDateDay);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.createCategoryButton);
@@ -598,7 +766,6 @@
         private System.Windows.Forms.Button createCategoryButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox expenseDateDay;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox expenseCategoryTextBox;
         private System.Windows.Forms.Label label7;
@@ -611,7 +778,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox incomeDateMonth;
-        private System.Windows.Forms.ComboBox incomeDateDay;
         private System.Windows.Forms.TextBox incomeAccountTextBox;
         private System.Windows.Forms.TextBox incomeAmountTextBox;
         private System.Windows.Forms.Label label12;
@@ -625,6 +791,19 @@
         private System.Windows.Forms.TextBox switchAccountNameTextBox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button switchAccountButton;
+        private System.Windows.Forms.Button createCategoryUIButton;
+        private System.Windows.Forms.Button addExpenseUIButton;
+        private System.Windows.Forms.Button addIncomeUIButton;
+        private System.Windows.Forms.Button addAccountUIButton;
+        private System.Windows.Forms.Button editCategoryButton;
+        private System.Windows.Forms.TextBox editCategoryNewTargetAmountTextBox;
+        private System.Windows.Forms.TextBox editCategoryNameTextBox;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button switchAccountUIButton;
+        private System.Windows.Forms.Button editCategoryUIButton;
+        private System.Windows.Forms.Button goBackButton;
     }
 }
 
