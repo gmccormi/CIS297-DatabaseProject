@@ -22,3 +22,4 @@ C:\Users\griff_000\Documents\School\CIS 297\CIS297-DatabaseProject\DatabaseProje
 C:\Users\gordinm1\Documents\GitHub\CIS 275\CIS297-Winter2017-gordinm1\New folder\CIS297-DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.exe.config
 C:\Users\gordinm1\Documents\GitHub\CIS 275\CIS297-Winter2017-gordinm1\New folder\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.exe
 C:\Users\gordinm1\Documents\GitHub\CIS 275\CIS297-Winter2017-gordinm1\New folder\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.pdb
+D:\Steven\OneDrive - umich.edu\CIS\CIS 297\Github Repositories\CIS297-DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.Form1.resources
