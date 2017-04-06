@@ -14,33 +14,24 @@ namespace DatabaseProject
 {
     public partial class Form1 : Form
     {
+        DataTable dataTable;
+
         SqlCommand command;
 
         SqlConnection connection;
 
-        List<String> categories;
-        List<String> accounts;
+        SqlDataAdapter dataAdapter;
+
+        List<String> existingCategories;
+        List<String> existingAccounts;
 
         public Form1()
         {
             InitializeComponent();
-            connection = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = D:\\Steven\\OneDrive - umich.edu\\CIS\\CIS 297\\DatabaseProject\\Budget Tracker.mdf; Integrated Security = True");
+            connection = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = D:\\Steven\\OneDrive - umich.edu\\CIS\\CIS 297\\Github Repositories\\CIS297-DatabaseProject\\DatabaseProject\\Budget Tracker.mdf; Integrated Security = True");
             connection.Open();
-            categories = new List<String>();
-            accounts = new List<String>();
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            command = new SqlCommand("TRUNCATE TABLE" + " Accounts", connection);
-            command.ExecuteNonQuery();
-            command = new SqlCommand("TRUNCATE TABLE" + " Categories", connection);
-            command.ExecuteNonQuery();
-            command = new SqlCommand("TRUNCATE TABLE" + " Expenses", connection);
-            command.ExecuteNonQuery();
-            command = new SqlCommand("TRUNCATE TABLE" + " Income", connection);
-            command.ExecuteNonQuery();
-            connection.Close();
+            existingCategories = new List<String>();
+            existingAccounts = new List<String>();
         }
 
         private void addIncomeButton_Click_1(object sender, EventArgs e)
@@ -57,7 +48,7 @@ namespace DatabaseProject
                 MessageBox.Show("Please enter a numerical value for target amount.", "Error");
                 return;
             }
-            if (!accounts.Contains(incomeAccountTextBox.Text))
+            if (!existingAccounts.Contains(incomeAccountTextBox.Text))
             {
                 MessageBox.Show("That account does not exist.", "Error");
                 return;
@@ -85,12 +76,12 @@ namespace DatabaseProject
                 MessageBox.Show("Please enter a numerical value for amount.", "Error");
                 return;
             }
-            if (!categories.Contains(expenseCategoryTextBox.Text))
+            if (!existingCategories.Contains(expenseCategoryTextBox.Text))
             {
                 MessageBox.Show("That category does not exist.", "Error");
                 return;
             }
-            if (!accounts.Contains(expenseAccountTextBox.Text))
+            if (!existingAccounts.Contains(expenseAccountTextBox.Text))
             {
                 MessageBox.Show("That account does not exist.", "Error");
                 return;
@@ -119,14 +110,14 @@ namespace DatabaseProject
                 MessageBox.Show("Please enter a numerical value for target amount.", "Error");
                 return;
             }
-            if (categories.Contains(CategoryNameTextBox.Text))
+            if (existingCategories.Contains(CategoryNameTextBox.Text))
             {
                 MessageBox.Show("That category already exists.", "Error");
                 return;
             }
             else
             {
-                categories.Add(CategoryNameTextBox.Text);
+                existingCategories.Add(CategoryNameTextBox.Text);
             }
 
             command = new SqlCommand("INSERT INTO Categories (Name, Budget, Balance) VALUES (@Name,@Budget,@Balance)", connection);
@@ -143,14 +134,14 @@ namespace DatabaseProject
                 MessageBox.Show("Please confirm name has a value.", "Error");
                 return;
             }
-            if (accounts.Contains(addAccountNameTextBox.Text))
+            if (existingAccounts.Contains(addAccountNameTextBox.Text))
             {
                 MessageBox.Show("That account already exists.", "Error");
                 return;
             }
             else
             {
-                accounts.Add(addAccountNameTextBox.Text);
+                existingAccounts.Add(addAccountNameTextBox.Text);
             }
 
             command = new SqlCommand("INSERT INTO Accounts (Name, Balance) VALUES (@Name,@Balance)", connection);
@@ -166,6 +157,56 @@ namespace DatabaseProject
                 MessageBox.Show("Please confirm name has a value.", "Error");
                 return;
             }
+
+            if (switchAccountNameComboBox.Text == "Accounts")
+            {
+                command = new SqlCommand("select * from Accounts", connection);
+                command.ExecuteNonQuery();
+                dataTable = new DataTable();
+                dataAdapter = new SqlDataAdapter(command);
+                dataAdapter.Fill(dataTable);
+                BudgetTrackerData.DataSource = dataTable;
+            }
+            else if (switchAccountNameComboBox.Text == "Categories")
+            {
+                command = new SqlCommand("select * from Categories", connection);
+                command.ExecuteNonQuery();
+                dataTable = new DataTable();
+                dataAdapter = new SqlDataAdapter(command);
+                dataAdapter.Fill(dataTable);
+                BudgetTrackerData.DataSource = dataTable;
+            }
+            else if (switchAccountNameComboBox.Text == "Expenses")
+            {
+                command = new SqlCommand("select * from Expenses", connection);
+                command.ExecuteNonQuery();
+                dataTable = new DataTable();
+                dataAdapter = new SqlDataAdapter(command);
+                dataAdapter.Fill(dataTable);
+                BudgetTrackerData.DataSource = dataTable;
+            }
+            else if (switchAccountNameComboBox.Text == "Income")
+            {
+                command = new SqlCommand("select * from Income", connection);
+                command.ExecuteNonQuery();
+                dataTable = new DataTable();
+                dataAdapter = new SqlDataAdapter(command);
+                dataAdapter.Fill(dataTable);
+                BudgetTrackerData.DataSource = dataTable;
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            command = new SqlCommand("TRUNCATE TABLE" + " Accounts", connection);
+            command.ExecuteNonQuery();
+            command = new SqlCommand("TRUNCATE TABLE" + " Categories", connection);
+            command.ExecuteNonQuery();
+            command = new SqlCommand("TRUNCATE TABLE" + " Expenses", connection);
+            command.ExecuteNonQuery();
+            command = new SqlCommand("TRUNCATE TABLE" + " Income", connection);
+            command.ExecuteNonQuery();
+            connection.Close();
         }
     }
 }

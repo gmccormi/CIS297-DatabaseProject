@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.budget_TrackerDataSet = new DatabaseProject.Budget_TrackerDataSet();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BudgetTrackerData = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             this.incomeDateBox = new System.Windows.Forms.DateTimePicker();
             this.switchAccountNameComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.budget_TrackerDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BudgetTrackerData)).BeginInit();
             this.SuspendLayout();
             // 
             // budget_TrackerDataSet
@@ -73,17 +73,17 @@
             this.budget_TrackerDataSet.DataSetName = "Budget_TrackerDataSet";
             this.budget_TrackerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridView1
+            // BudgetTrackerData
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.budget_TrackerDataSet;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 11);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(372, 458);
-            this.dataGridView1.TabIndex = 1;
+            this.BudgetTrackerData.AutoGenerateColumns = false;
+            this.BudgetTrackerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BudgetTrackerData.DataSource = this.budget_TrackerDataSet;
+            this.BudgetTrackerData.Location = new System.Drawing.Point(11, 11);
+            this.BudgetTrackerData.Margin = new System.Windows.Forms.Padding(2);
+            this.BudgetTrackerData.Name = "BudgetTrackerData";
+            this.BudgetTrackerData.RowTemplate.Height = 24;
+            this.BudgetTrackerData.Size = new System.Drawing.Size(372, 458);
+            this.BudgetTrackerData.TabIndex = 17;
             // 
             // label1
             // 
@@ -92,7 +92,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 18;
             this.label1.Text = "Create Categoy:";
             // 
             // label2
@@ -102,7 +102,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 19;
             this.label2.Text = "Name:";
             // 
             // label3
@@ -111,17 +111,18 @@
             this.label3.Location = new System.Drawing.Point(409, 71);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Taget Amount:";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Budget:";
             // 
             // CategoryNameTextBox
             // 
             this.CategoryNameTextBox.Location = new System.Drawing.Point(517, 41);
             this.CategoryNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.CategoryNameTextBox.MaxLength = 50;
             this.CategoryNameTextBox.Name = "CategoryNameTextBox";
             this.CategoryNameTextBox.Size = new System.Drawing.Size(200, 20);
-            this.CategoryNameTextBox.TabIndex = 6;
+            this.CategoryNameTextBox.TabIndex = 0;
             // 
             // CategoryTargetAmountTextBox
             // 
@@ -129,7 +130,7 @@
             this.CategoryTargetAmountTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CategoryTargetAmountTextBox.Name = "CategoryTargetAmountTextBox";
             this.CategoryTargetAmountTextBox.Size = new System.Drawing.Size(200, 20);
-            this.CategoryTargetAmountTextBox.TabIndex = 7;
+            this.CategoryTargetAmountTextBox.TabIndex = 1;
             // 
             // createCategoryButton
             // 
@@ -137,7 +138,7 @@
             this.createCategoryButton.Margin = new System.Windows.Forms.Padding(2);
             this.createCategoryButton.Name = "createCategoryButton";
             this.createCategoryButton.Size = new System.Drawing.Size(56, 19);
-            this.createCategoryButton.TabIndex = 8;
+            this.createCategoryButton.TabIndex = 2;
             this.createCategoryButton.Text = "Create";
             this.createCategoryButton.UseVisualStyleBackColor = true;
             this.createCategoryButton.Click += new System.EventHandler(this.createCategoryButton_Click_1);
@@ -149,7 +150,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 13);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 21;
             this.label4.Text = "Add Expense:";
             // 
             // label5
@@ -159,7 +160,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 22;
             this.label5.Text = "Date:";
             // 
             // label6
@@ -169,16 +170,17 @@
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 12;
+            this.label6.TabIndex = 23;
             this.label6.Text = "Category:";
             // 
             // expenseCategoryTextBox
             // 
             this.expenseCategoryTextBox.Location = new System.Drawing.Point(517, 191);
             this.expenseCategoryTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.expenseCategoryTextBox.MaxLength = 50;
             this.expenseCategoryTextBox.Name = "expenseCategoryTextBox";
             this.expenseCategoryTextBox.Size = new System.Drawing.Size(200, 20);
-            this.expenseCategoryTextBox.TabIndex = 13;
+            this.expenseCategoryTextBox.TabIndex = 4;
             // 
             // label7
             // 
@@ -187,16 +189,17 @@
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
-            this.label7.TabIndex = 14;
+            this.label7.TabIndex = 24;
             this.label7.Text = "Memo:";
             // 
             // expenseMemoTextBox
             // 
             this.expenseMemoTextBox.Location = new System.Drawing.Point(517, 222);
             this.expenseMemoTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.expenseMemoTextBox.MaxLength = 100;
             this.expenseMemoTextBox.Name = "expenseMemoTextBox";
             this.expenseMemoTextBox.Size = new System.Drawing.Size(200, 20);
-            this.expenseMemoTextBox.TabIndex = 15;
+            this.expenseMemoTextBox.TabIndex = 5;
             // 
             // label8
             // 
@@ -205,7 +208,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 13);
-            this.label8.TabIndex = 16;
+            this.label8.TabIndex = 25;
             this.label8.Text = "Amount:";
             // 
             // label9
@@ -215,7 +218,7 @@
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 13);
-            this.label9.TabIndex = 17;
+            this.label9.TabIndex = 26;
             this.label9.Text = "Account:";
             // 
             // expenseAmountTextBox
@@ -224,15 +227,16 @@
             this.expenseAmountTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.expenseAmountTextBox.Name = "expenseAmountTextBox";
             this.expenseAmountTextBox.Size = new System.Drawing.Size(200, 20);
-            this.expenseAmountTextBox.TabIndex = 18;
+            this.expenseAmountTextBox.TabIndex = 6;
             // 
             // expenseAccountTextBox
             // 
             this.expenseAccountTextBox.Location = new System.Drawing.Point(517, 282);
             this.expenseAccountTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.expenseAccountTextBox.MaxLength = 50;
             this.expenseAccountTextBox.Name = "expenseAccountTextBox";
             this.expenseAccountTextBox.Size = new System.Drawing.Size(200, 20);
-            this.expenseAccountTextBox.TabIndex = 19;
+            this.expenseAccountTextBox.TabIndex = 7;
             // 
             // addExpenseButton
             // 
@@ -240,7 +244,7 @@
             this.addExpenseButton.Margin = new System.Windows.Forms.Padding(2);
             this.addExpenseButton.Name = "addExpenseButton";
             this.addExpenseButton.Size = new System.Drawing.Size(56, 19);
-            this.addExpenseButton.TabIndex = 20;
+            this.addExpenseButton.TabIndex = 8;
             this.addExpenseButton.Text = "Add";
             this.addExpenseButton.UseVisualStyleBackColor = true;
             this.addExpenseButton.Click += new System.EventHandler(this.addExpenseButton_Click_1);
@@ -252,7 +256,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 13);
-            this.label10.TabIndex = 21;
+            this.label10.TabIndex = 27;
             this.label10.Text = "Add Income:";
             // 
             // label11
@@ -262,16 +266,17 @@
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 13);
-            this.label11.TabIndex = 22;
+            this.label11.TabIndex = 28;
             this.label11.Text = "Date:";
             // 
             // incomeAccountTextBox
             // 
             this.incomeAccountTextBox.Location = new System.Drawing.Point(517, 433);
             this.incomeAccountTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.incomeAccountTextBox.MaxLength = 50;
             this.incomeAccountTextBox.Name = "incomeAccountTextBox";
             this.incomeAccountTextBox.Size = new System.Drawing.Size(200, 20);
-            this.incomeAccountTextBox.TabIndex = 28;
+            this.incomeAccountTextBox.TabIndex = 11;
             // 
             // incomeAmountTextBox
             // 
@@ -279,7 +284,7 @@
             this.incomeAmountTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.incomeAmountTextBox.Name = "incomeAmountTextBox";
             this.incomeAmountTextBox.Size = new System.Drawing.Size(200, 20);
-            this.incomeAmountTextBox.TabIndex = 27;
+            this.incomeAmountTextBox.TabIndex = 10;
             // 
             // label12
             // 
@@ -288,7 +293,7 @@
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 13);
-            this.label12.TabIndex = 26;
+            this.label12.TabIndex = 30;
             this.label12.Text = "Account:";
             // 
             // label13
@@ -298,7 +303,7 @@
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 13);
-            this.label13.TabIndex = 25;
+            this.label13.TabIndex = 29;
             this.label13.Text = "Amount:";
             // 
             // addIncomeButton
@@ -307,7 +312,7 @@
             this.addIncomeButton.Margin = new System.Windows.Forms.Padding(2);
             this.addIncomeButton.Name = "addIncomeButton";
             this.addIncomeButton.Size = new System.Drawing.Size(56, 19);
-            this.addIncomeButton.TabIndex = 29;
+            this.addIncomeButton.TabIndex = 12;
             this.addIncomeButton.Text = "Add";
             this.addIncomeButton.UseVisualStyleBackColor = true;
             this.addIncomeButton.Click += new System.EventHandler(this.addIncomeButton_Click_1);
@@ -319,16 +324,17 @@
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(84, 13);
-            this.label14.TabIndex = 30;
+            this.label14.TabIndex = 31;
             this.label14.Text = "Create Account:";
             // 
             // addAccountNameTextBox
             // 
             this.addAccountNameTextBox.Location = new System.Drawing.Point(517, 518);
             this.addAccountNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.addAccountNameTextBox.MaxLength = 50;
             this.addAccountNameTextBox.Name = "addAccountNameTextBox";
             this.addAccountNameTextBox.Size = new System.Drawing.Size(200, 20);
-            this.addAccountNameTextBox.TabIndex = 32;
+            this.addAccountNameTextBox.TabIndex = 13;
             // 
             // label15
             // 
@@ -337,7 +343,7 @@
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(38, 13);
-            this.label15.TabIndex = 31;
+            this.label15.TabIndex = 32;
             this.label15.Text = "Name:";
             // 
             // addAccountButton
@@ -346,7 +352,7 @@
             this.addAccountButton.Margin = new System.Windows.Forms.Padding(2);
             this.addAccountButton.Name = "addAccountButton";
             this.addAccountButton.Size = new System.Drawing.Size(56, 19);
-            this.addAccountButton.TabIndex = 33;
+            this.addAccountButton.TabIndex = 14;
             this.addAccountButton.Text = "Create";
             this.addAccountButton.UseVisualStyleBackColor = true;
             this.addAccountButton.Click += new System.EventHandler(this.addAccountButton_Click_1);
@@ -358,7 +364,7 @@
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(72, 13);
-            this.label16.TabIndex = 34;
+            this.label16.TabIndex = 33;
             this.label16.Text = "Switch Table:";
             // 
             // label17
@@ -368,7 +374,7 @@
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(38, 13);
-            this.label17.TabIndex = 35;
+            this.label17.TabIndex = 34;
             this.label17.Text = "Name:";
             // 
             // switchTableButton
@@ -377,7 +383,7 @@
             this.switchTableButton.Margin = new System.Windows.Forms.Padding(2);
             this.switchTableButton.Name = "switchTableButton";
             this.switchTableButton.Size = new System.Drawing.Size(56, 19);
-            this.switchTableButton.TabIndex = 37;
+            this.switchTableButton.TabIndex = 16;
             this.switchTableButton.Text = "Switch";
             this.switchTableButton.UseVisualStyleBackColor = true;
             this.switchTableButton.Click += new System.EventHandler(this.switchTableButton_Click_1);
@@ -387,14 +393,14 @@
             this.expenseDateBox.Location = new System.Drawing.Point(517, 162);
             this.expenseDateBox.Name = "expenseDateBox";
             this.expenseDateBox.Size = new System.Drawing.Size(200, 20);
-            this.expenseDateBox.TabIndex = 38;
+            this.expenseDateBox.TabIndex = 3;
             // 
             // incomeDateBox
             // 
             this.incomeDateBox.Location = new System.Drawing.Point(517, 371);
             this.incomeDateBox.Name = "incomeDateBox";
             this.incomeDateBox.Size = new System.Drawing.Size(200, 20);
-            this.incomeDateBox.TabIndex = 39;
+            this.incomeDateBox.TabIndex = 9;
             // 
             // switchAccountNameComboBox
             // 
@@ -407,7 +413,7 @@
             this.switchAccountNameComboBox.Location = new System.Drawing.Point(159, 517);
             this.switchAccountNameComboBox.Name = "switchAccountNameComboBox";
             this.switchAccountNameComboBox.Size = new System.Drawing.Size(121, 21);
-            this.switchAccountNameComboBox.TabIndex = 40;
+            this.switchAccountNameComboBox.TabIndex = 15;
             // 
             // Form1
             // 
@@ -448,13 +454,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.BudgetTrackerData);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Budget Tracker";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.budget_TrackerDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BudgetTrackerData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,7 +470,7 @@
         #endregion
 
         private Budget_TrackerDataSet budget_TrackerDataSet;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView BudgetTrackerData;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
